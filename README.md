@@ -82,8 +82,6 @@
 
 ---
 
-## 🖼️ Screenshots
-
 ## 🖼️ Project Screenshots
 
 ### Customer Panel & Admin Panel
@@ -95,16 +93,6 @@
   <img src="public/screenshots/3.png" width="45%" style="margin: 10px;" />
   <img src="public/screenshots/4.png" width="45%" style="margin: 10px;" />
 </div>
-
-### Customer Panel
-
-![Customer Home](screenshots/customer-home.png)
-
-### Admin Dashboard
-
-![Admin Dashboard](screenshots/admin-dashboard.png)
-
----
 
 ## 🚀 Getting Started
 
