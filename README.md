@@ -89,11 +89,11 @@
 ### Customer Panel & Admin Panel
 
 <div align="center">
-  <img src="screenshots/1.png" width="45%" style="margin: 10px;" />
-  <img src="screenshots/2.png" width="45%" style="margin: 10px;" />
+  <img src="public/screenshots/1.png" width="45%" style="margin: 10px;" />
+  <img src="public/screenshots/2.png" width="45%" style="margin: 10px;" />
   <br/>
-  <img src="screenshots/3.png" width="45%" style="margin: 10px;" />
-  <img src="screenshots/4.png" width="45%" style="margin: 10px;" />
+  <img src="public/screenshots/3.png" width="45%" style="margin: 10px;" />
+  <img src="public/screenshots/4.png" width="45%" style="margin: 10px;" />
 </div>
 
 ### Customer Panel
