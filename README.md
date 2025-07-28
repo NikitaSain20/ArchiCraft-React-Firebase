@@ -99,8 +99,8 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/Archicraft-React-Firebase.git
-cd archicraft
+git clone https://github.com/NikitaSain20/Archicraft-React-Firebase.git
+cd Archicraft-React-Firebase
 ```
 
 ## Install Dependencies
@@ -113,9 +113,6 @@ npm install
 
 Create a .env file in the root directory:
 
-env
-Copy
-Edit
 REACT_APP_FIREBASE_API_KEY=your_key
 REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 REACT_APP_FIREBASE_PROJECT_ID=your_project
@@ -127,9 +124,6 @@ REACT_APP_FIREBASE_APP_ID=your_id
 
 ## Start the App
 
-bash
-Copy
-Edit
 npm start
 🧾 How to Use
 Customers can explore property types, place orders, and track progress from their dashboard.
