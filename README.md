@@ -82,9 +82,9 @@
 
 ---
 
-## 🖼️ Project Screenshots
+### 🖼️ Project Screenshots
 
-### Customer Panel & Admin Panel
+## Customer Panel & Admin Panel
 
 <div align="center">
   <img src="public/screenshots/1.png" width="45%" style="margin: 10px;" />
@@ -96,20 +96,16 @@
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+## 1. Clone the Repository
 
-```bash
 git clone https://github.com/NikitaSain20/Archicraft-React-Firebase.git
 cd Archicraft-React-Firebase
-```
 
-## Install Dependencies
+## 2.Install Dependencies
 
 npm install
 
----
-
-## Add Firebase Config
+## 3.Add Firebase Config
 
 Create a .env file in the root directory:
 
@@ -120,14 +116,20 @@ REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_id
 REACT_APP_FIREBASE_APP_ID=your_id
 
----
-
-## Start the App
+## 4.Start the App
 
 npm start
-🧾 How to Use
+
+### 🧾 How to Use
+
 Customers can explore property types, place orders, and track progress from their dashboard.
 
 Admins can view overall stats, manage all content (users, orders, reviews), and send final designs.
 
 ---
+
+### ✍️ Author
+
+<br/>
+
+Developed by Nikita Sain
