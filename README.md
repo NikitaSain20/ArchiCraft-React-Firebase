@@ -2,10 +2,6 @@
 
 **ArchiCraft** is a full-stack web application built using **React** and **Firebase**. It enables customers to order custom architectural designs and allows admins to manage users, orders, and property types. The app ensures a seamless workflow between architects and clients.
 
-## 🔗 Live Demo
-
-[Click Here to View Live App](https://archicraft-minor-project.web.app)
-
 ---
 
 ## 📌 Features
