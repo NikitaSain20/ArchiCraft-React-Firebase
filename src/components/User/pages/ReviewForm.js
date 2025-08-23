@@ -35,7 +35,7 @@ export default function ReviewForm() {
   // }, 2000);
   const addReviews = async (e) => {
     e.preventDefault();
-    setLoad(true)
+    setLoad(true);
     if (currentRating === "" || comment === "") {
       toast.error("All Fields are mandatory", {
         position: "top-center",
@@ -70,17 +70,15 @@ export default function ReviewForm() {
       toast.success("Thanks For Your Review", {
         position: "top-center",
       });
-      setLoad(false)
+      setLoad(false);
       setTimeout(() => {
         navigate("/myreviews");
       }, 500);
     } catch (error) {
-      setLoad(false)
+      setLoad(false);
       toast.error("Something Went Wrong", {
         position: "top-center",
       });
-
-      console.log(error);
     }
   };
 
@@ -159,7 +157,11 @@ export default function ReviewForm() {
                         <FaStar
                           key={ratingValue}
                           size={50}
-                          color={ratingValue <= (hoverRating || currentRating) ? "#ffc107" : "#e4e5e9"}
+                          color={
+                            ratingValue <= (hoverRating || currentRating)
+                              ? "#ffc107"
+                              : "#e4e5e9"
+                          }
                           style={{ cursor: "pointer" }}
                           onClick={() => handleClick(ratingValue)}
                           onMouseEnter={() => handleMouseEnter(ratingValue)}

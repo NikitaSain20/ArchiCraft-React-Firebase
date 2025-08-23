@@ -9,68 +9,12 @@ import { useNavigate } from "react-router-dom";
 export default function Profile() {
   // const [userData, setUserData] = useState(null);
   const [editMode, setEditMode] = useState(false);
-  const [name, setName] = useState("")
-  const [contact, setContact] = useState("")
-  const [email, setEmail] = useState("")
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
+  const [email, setEmail] = useState("");
   const [load, setLoad] = useState(true);
   const nav = useNavigate();
 
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const user = auth.currentUser;
-  //       console.log(user)
-  //       if (user) {
-  //         const userDocRef = doc(db, "users", user.uid);
-  //         const userDocSnap = await getDoc(userDocRef);
-
-  //         if (userDocSnap.exists()) {
-  //           setUserData(userDocSnap.data());
-  //         } else {
-  //           console.log("No such document!");
-  //         }
-  //       } else {
-  //         console.log("No user is signed in.");
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching user data:", error);
-  //     } finally {
-  //       setLoad(false);
-  //     }
-  //   };
-
-  //   fetchUserData();
-  // }, []);
-
-  // const handleInputChange = (e) => {
-  //   setUserData({ ...userData, [e.target.name]: e.target.value });
-  // };
-
-  // const handleSave = async () => {
-  //   setLoad(true);
-  //   try {
-  //     const user = auth.currentUser;
-  //     if (user) {
-  //       const userDocRef = doc(db, "users", user.uid);
-  //       await updateDoc(userDocRef, userData);
-  //       setEditMode(false);
-  //       toast.success("Profile Updated Successfully", {
-  //         position: "top-center",
-  //       });
-  //       setTimeout(() => {
-  //         setLoad(false);
-  //       }, 2000);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error updating profile:", error);
-  //     toast.error("Something went wrong", {
-  //       position: "top-center",
-  //     });
-  //     setTimeout(() => {
-  //       setLoad(false);
-  //     }, 2000);
-  //   }
-  // };
   let authenticate = sessionStorage.getItem("isLogin");
   useEffect(() => {
     if (!authenticate) {
@@ -92,7 +36,7 @@ export default function Profile() {
       let customerData = customerSnap.data();
       setName(customerData.name);
       setContact(customerData.contact);
-      setEmail(customerData.email)
+      setEmail(customerData.email);
       // setAddress(customerData.address);
       setLoad(false);
     } else {
@@ -103,7 +47,7 @@ export default function Profile() {
   };
   const udpateProfile = (e) => {
     e.preventDefault();
-    setLoad(true)
+    setLoad(true);
     let userRef = doc(db, "users", id);
     try {
       updateDoc(userRef, {
@@ -113,8 +57,8 @@ export default function Profile() {
       });
 
       setLoad(false);
-      // console.log("done")
-      setEditMode(false)
+      // ("done")
+      setEditMode(false);
       toast.success("Profile Updated Successfully");
     } catch (err) {
       setLoad(false);
@@ -196,7 +140,8 @@ export default function Profile() {
                           <label>Name:</label>
                           <input
                             type="text"
-                            name="name" onChange={(e) => {
+                            name="name"
+                            onChange={(e) => {
                               setName(e.target.value);
                             }}
                             value={name}
@@ -238,22 +183,13 @@ export default function Profile() {
                     ) : (
                       <>
                         <h1>
-                          Name:{" "}
-                          <span className="name mt-3">
-                            {name}
-                          </span>
+                          Name: <span className="name mt-3">{name}</span>
                         </h1>
                         <h1>
-                          Email:{" "}
-                          <span className="idd">
-                            {email}
-                          </span>
+                          Email: <span className="idd">{email}</span>
                         </h1>
                         <h1>
-                          Contact:{" "}
-                          <span className="idd">
-                            {contact}
-                          </span>
+                          Contact: <span className="idd">{contact}</span>
                         </h1>
                         <button
                           className="btn1 btn-primary btn-lg mt-3"

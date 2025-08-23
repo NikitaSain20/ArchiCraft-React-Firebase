@@ -15,8 +15,6 @@ export default function RegisterUser() {
   const [load, setLoad] = useState(false);
   const navigate = useNavigate();
 
-
-
   const handleRegister = async (e) => {
     e.preventDefault();
     setLoad(true);
@@ -68,7 +66,7 @@ export default function RegisterUser() {
           toast.error("Something went wrong!!!", {
             position: "top-center",
           });
-          console.log("Error details:", error);
+          "Error details:", error;
         }
       }
     }

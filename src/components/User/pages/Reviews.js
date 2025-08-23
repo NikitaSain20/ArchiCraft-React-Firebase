@@ -54,29 +54,17 @@ export default function Reviews() {
           }));
 
           const joinedData = reviews.map((review) => {
-            // console.log(review);
-
-            // let tempUser =
-            //   console.log(tempUser);
-
             const user = users.find((usr) => usr.uniqueId === review.userId);
-            // const user = users.filter((el) => el.uniqueId == review.userId)
+
             return {
               ...review,
               user,
             };
           });
-          // console.log(users);
 
-          // console.log(joinedData);
           setData(joinedData);
-          console.log(data);
         });
       });
-
-      // return () => {
-      //   unsubscribeReviews();
-      // };
     };
 
     getReviews();

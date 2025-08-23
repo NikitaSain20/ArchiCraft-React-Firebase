@@ -12,9 +12,14 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { getAuth } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from "firebase/storage";
+import {
+  getDownloadURL,
+  ref,
+  uploadBytes,
+  uploadBytesResumable,
+} from "firebase/storage";
 import { RingLoader } from "react-spinners";
-import { storage } from "../../../Firebase2"
+import { storage } from "../../../Firebase2";
 export default function AddPropertyType() {
   const [propertyName, setPropertyName] = useState("");
   const [description, setDescription] = useState("");
@@ -22,7 +27,6 @@ export default function AddPropertyType() {
   const [file, setFile] = useState();
   const [fileName, setFileName] = useState();
   const [imageUrl, setImageUrl] = useState();
-
 
   const navigate = useNavigate();
 
@@ -45,10 +49,8 @@ export default function AddPropertyType() {
 
     uploadTask.on(
       "state_changed",
-      (snapshot) => { },
-      (err) => {
-        console.log("Error in File Uploading", err);
-      },
+      (snapshot) => {},
+      (err) => {},
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           setLoad(false);
@@ -120,9 +122,8 @@ export default function AddPropertyType() {
         position: "top-center",
       });
       setLoad(false);
-      console.log(error);
     }
-  }
+  };
   return (
     <>
       <RingLoader
@@ -223,7 +224,6 @@ export default function AddPropertyType() {
                       <button
                         className="btn btn-primary w-100 py-3"
                         type="submit"
-
                       >
                         Add
                       </button>

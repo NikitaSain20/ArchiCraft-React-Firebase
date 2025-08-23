@@ -19,7 +19,7 @@ export default function Login() {
       setLoad(false);
 
       const user = res.user;
-      console.log(user)
+      console.log(user);
       checkUser(res.user.uid);
     } catch (err) {
       setLoad(false);
@@ -29,7 +29,7 @@ export default function Login() {
   };
   const checkUser = (uid) => {
     setLoad(true);
-    // console.log(uid);
+
     let userRef = collection(db, "/users");
     let que = query(userRef, where("uid", "==", uid));
     console.log(que);
@@ -97,9 +97,7 @@ export default function Login() {
           data-wow-delay="0.1s"
         >
           <div className="container py-5">
-            <h1 className="display-1 text-white animated slideInDown">
-              Login
-            </h1>
+            <h1 className="display-1 text-white animated slideInDown">Login</h1>
             <nav aria-label="breadcrumb animated slideInDown">
               <ol className="breadcrumb text-uppercase mb-0">
                 <li className="breadcrumb-item">
